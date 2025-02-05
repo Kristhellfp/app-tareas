@@ -1,0 +1,12 @@
+.headerTrabajo {
+    height: 5rem;
+    background-color: rgb(156, 194, 161);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTrabajo img {
+    width: 4rem;
+}

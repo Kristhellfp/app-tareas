@@ -1,56 +1,56 @@
-import { tareas } from './data.js';
-
-function formulario() {
+export function cargarFormulario() {
     let formulario = document.createElement('div');
     formulario.className = 'formulario';
 
     let titulo = document.createElement('h2');
-    titulo.textContent = 'Personal';
-    titulo.className = 'personal';
+    titulo.textContent = 'Lista de Tareas';
     formulario.appendChild(titulo);
 
-    tareas.forEach(function (tarea) {
-        let item = document.createElement('div');
-        item.className = 'textos';
+  
+    let listaTareas = document.createElement('ul');
+    listaTareas.className = 'lista-tareas';
+    formulario.appendChild(listaTareas);
 
-        let checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.className = 'fcheckbox';
-        checkbox.id = `tarea-${tarea}`;
+    
+    let formBottom = document.createElement('div');
+    formBottom.className = 'form-bottom';
 
-        let label = document.createElement('label');
-        label.textContent = tarea;
-        label.className = 'elementos';
-        label.setAttribute('for', checkbox.id);
+    let inputTarea = document.createElement('input');
+    inputTarea.className = 'form-input';
+    inputTarea.type = 'text';
+    inputTarea.placeholder = 'Escribe una tarea...';
 
-        item.addEventListener('click', function () {
-            let check = this.querySelector('.fcheckbox'); 
-            check.checked = !check.checked;
-            this.classList.toggle('seleccionado', check.checked);
-        });
+    let botonAgregar = document.createElement('button');
+    botonAgregar.className = 'form-button';
+    botonAgregar.textContent = 'Agregar';
 
-        item.appendChild(checkbox);
-        item.appendChild(label);
-        formulario.appendChild(item);
+    formBottom.appendChild(inputTarea);
+    formBottom.appendChild(botonAgregar);
+    formulario.appendChild(formBottom);
+
+   
+    botonAgregar.addEventListener('click', () => {
+        let tareaTexto = inputTarea.value.trim();
+        if (tareaTexto !== '') {
+            let tarea = document.createElement('li');
+            tarea.className = 'textos';
+            tarea.innerHTML = `
+                <input type="checkbox" class="fcheckbox">
+                <span class="elementos">${tareaTexto}</span>
+            `;
+            listaTareas.appendChild(tarea);
+
+         
+            tarea.addEventListener('click', (e) => {
+                const check = tarea.querySelector('.fcheckbox');
+                if (e.target !== check) {  
+                    check.checked = !check.checked;  
+                }
+            });
+
+            inputTarea.value = ''; 
+        }
     });
-
-    let bottom = document.createElement('div');
-    bottom.className = 'form-bottom';
-
-    let input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'Write a task...';
-    input.className = 'form-input';
-
-    let button = document.createElement('button');
-    button.textContent = 'Add';
-    button.className = 'form-button';
-
-    bottom.appendChild(input);
-    bottom.appendChild(button);
-    formulario.appendChild(bottom);
 
     return formulario;
 }
-
-export { formulario };

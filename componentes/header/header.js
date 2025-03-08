@@ -1,10 +1,6 @@
-function header() {
-    let header = document.createElement('header');
-    header.className = "headerTrabajo";  
-    return header;
-}
+export function headerTrabajo() {
+    console.log("Creando el header...");
 
-function headerTrabajo() {
     let header = document.createElement('header');
     header.classList.add('headerTrabajo'); 
 
@@ -17,8 +13,7 @@ function headerTrabajo() {
     h1.innerText = "Fer";
     header.appendChild(h1);
 
+    console.log(header); 
+
     return header;
 }
-
-
-export {headerTrabajo };

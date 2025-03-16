@@ -1,55 +1,67 @@
-.div-item {
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
     display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px;
-    margin-bottom: 10px;
+    flex-direction: column;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 30px auto;
+    align-items: center;
 }
 
-.div-item:hover {
-    background-color: #f9f9f9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+.formulario h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff66b2;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.div-item input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+
+.lista-tareas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; 
+}
+
+.lista-tareas input {
+    padding: 8px;
+    border: 1px solid #ff66b2;
+    border-radius: 5px;
+    width: 80%;
     margin-right: 10px;
+}
+
+
+.lista-tareas button {
+    background-color: #ff66b2;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
 }
 
-.div-item p {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-    flex: 1;
+.lista-tareas button:hover {
+    background-color: #ff3385;
 }
 
-.div-item.completada {
-    background-color: #e8f5e9;
-    text-decoration: line-through;
-    color: #666;
-}
-
-.div-tareas {
+button {
+    background-color: #ff66b2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
     margin-top: 20px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.div-item {
-    animation: fadeIn 0.3s ease;
+button:hover {
+    background-color: #ff3385;
 }

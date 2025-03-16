@@ -1,4 +1,4 @@
-
+// tareas.js
 function tarea(nombreTarea) {
     const divTarea = document.createElement('div');
     divTarea.className = "div-item";
@@ -12,7 +12,6 @@ function tarea(nombreTarea) {
     p.textContent = nombreTarea;
     divTarea.appendChild(p);
 
-   
     divTarea.addEventListener('click', (e) => {
         if (e.target !== check) { 
             check.checked = !check.checked;  
@@ -22,14 +21,12 @@ function tarea(nombreTarea) {
     return divTarea;
 }
 
-
 function consultarTareasBackend() {
     fetch('http://localhost:3000/tareas')
         .then(response => response.json())
         .then(data => cargarTareasDOM(data))
         .catch(error => console.error('Error al consultar tareas:', error));
 }
-
 
 function cargarTareasDOM(data) {
     const listaTareas = document.querySelector('.lista-tareas');

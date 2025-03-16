@@ -1,0 +1,65 @@
+
+.registro {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.registro-imagen {
+    width: 100%;  
+    max-width: 250px; 
+    height: auto;  
+    margin-bottom: 20px;  
+    border-radius: 8px;
+}
+
+.registro h2 {
+    font-size: 24px;
+    color: #b82f5d;
+    margin-bottom: 20px;
+}
+
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; 
+}
+
+.form-input:focus {
+    border-color: #e46e9b;  
+    outline: none;  
+}
+
+/* Estilos del botón */
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #eb6d93;  /* Verde */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #c55c96;  
+}
+
+
+.alert {
+    color: rgb(240, 103, 137);
+    font-weight: bold;
+    margin-top: 10px;
+}

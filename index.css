@@ -1,18 +1,13 @@
+/* Estilos generales */
 body {
-max-width: 375px;
-margin: auto;
-}
-
-.contenido{
-    display: grid;
-    height: 35rem ;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(6,1fr);
-    gap: 1rem;
-}
-
-.contenido h1 {
-    color: black;
-    grid-column: 1/2;
-    grid-row: 1/2;  
-}
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  #app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
